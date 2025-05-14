@@ -14,15 +14,9 @@ public class FlugBegleiter extends Person {
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		if (o == null)
-			return false;
-		if (this == o)
-			return true;
-		if (this.getClass() != o.getClass())
-			return false;
-
-		FlugBegleiter other = (FlugBegleiter) o;
-		return other.getNachname() == this.getNachname() && other.getVorname() == this.getVorname();
-	}
+   public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        return super.equals(o); 
+    }
 }

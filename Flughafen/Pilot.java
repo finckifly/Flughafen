@@ -35,17 +35,13 @@ public class Pilot extends Person {
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		if (o == null)
-			return false;
-		if (this == o)
-			return true;
-		if (this.getClass() != o.getClass())
-			return false;
-
-		Pilot other = (Pilot) o;
-		return other.getNachname() == this.getNachname() && other.getVorname() == this.getVorname()
-				&& this.Kapitaen == other.Kapitaen;
-	}
-
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Pilot pilot = (Pilot) o;
+        return Kapitaen == pilot.Kapitaen;
+    }
+	
 }
+

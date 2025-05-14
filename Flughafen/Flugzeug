@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
-public class Flugzeug {
+public class Flugzeug implements Serializable {
+    
+    //Attribute
     public String typ;
     public int anzahlPlaetze;
     private boolean tankVoll;
@@ -11,7 +13,7 @@ public class Flugzeug {
         this.tankVoll = false;
 
     }
-
+    //Setter & Getter
     public String getTyp() {
         return typ;
     }
@@ -43,10 +45,6 @@ public class Flugzeug {
 
     @Override
     public String toString() {
-        return "Flugzeug{" +
-                "typ='" + typ + '\'' +
-                ", anzahlPlaetze=" + anzahlPlaetze +
-                ", tankVoll=" + tankVoll +
-                '}';
+        return "Flugzeug{" + "typ='" + typ + '\'' + ", anzahlPlaetze=" + anzahlPlaetze + ", tankVoll=" + tankVoll +'}';
     }
 }
