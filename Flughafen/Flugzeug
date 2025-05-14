@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.random;
 
 public class Flugzeug {
-    private String typ;
-    private int anzahlPlaetze;
+    public String typ;
+    public int anzahlPlaetze;
     private boolean tankVoll;
 
     public Flugzeug(String typ, int anzahlPlaetze) {
@@ -33,10 +32,14 @@ public class Flugzeug {
     }
 
 
-    public void tanken () {
+    public void tanken() {
         this.tankVoll = true;
-    
     }
+
+    public void verbraucheTreibstoff() {
+        this.tankVoll = false;
+    }
+    
 
     @Override
     public String toString() {

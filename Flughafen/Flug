@@ -87,13 +87,24 @@ public class Flug implements Serializable{
         return anzahlPlaetze()- anzahlGaeste();
     }
     private boolean checkFlug(){
-
+		if(ArrayList<Pilot>.size = 2){
+		System.out.println("Es sind genug Kaptiäns an Board!");
+		}else{
+		System.out.println("Es sind nicht genug Kaptiäns an Board!");
+		}
+		if(ArrayList<FlugBegleiter>.size >= 2 && ArrayList<FlugBegleiter>.size <= 3)
+		System.out.println("Es sind genug Flugbegleiter an Board!");
+		else if (ArrayList<FlugBegleiter>.size < 2)
+		System.out.println("Es sind nicht genug Flugbegleiter an Board!");
+		else (ArrayList<FlugBegleiter>.size > 3 )
+		System.out.println("Es sind genug Flugbegleiter an Board!");
+		
     }
     public boolean starten(){
         if(checkFlug()){
             System.out.println("Flugzeug kann startet!");
         }else{
-            System.out.println("Flugzeug kann nicht starten!")
+            System.out.println("Flugzeug kann nicht starten!");
         }
     }
 
