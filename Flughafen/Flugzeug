@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.random;
+
+public class Flugzeug {
+    private String typ;
+    private int anzahlPlaetze;
+    private boolean tankVoll;
+
+    public Flugzeug(String typ, int anzahlPlaetze) {
+        this.typ = typ;
+        this.anzahlPlaetze = anzahlPlaetze;
+        this.tankVoll = false;
+
+    }
+
+    public String getTyp() {
+        return typ;
+    }
+
+    public void setTyp(String typ) {
+        this.typ = typ;
+    }
+
+    public int getanzahlPlaetze() {
+        return anzahlPlaetze;
+    }
+
+    public void setanzahlPlaetze(int anzahlPlaetze) {
+        this.anzahlPlaetze = anzahlPlaetze;
+    }
+    public boolean isTankVoll() {
+        return tankVoll;
+    }
+
+
+    public void tanken () {
+        this.tankVoll = true;
+    
+    }
+
+    @Override
+    public String toString() {
+        return "Flugzeug{" +
+                "typ='" + typ + '\'' +
+                ", anzahlPlaetze=" + anzahlPlaetze +
+                ", tankVoll=" + tankVoll +
+                '}';
+    }
+}

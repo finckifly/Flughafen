@@ -1,0 +1,100 @@
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
+public class Flug implements Serializable{
+	
+	//Attribute
+	private LocalDateTime startzeit;
+	private LocalDateTime landezeit;
+	private String startFlughafen;
+	private String zielFlughafen;
+	Flugzeug flugzeug;
+	ArrayList<Pilot> piloten;
+	ArrayList<FlugBegleiter> flugBegleiter;
+	ArrayList<FlugGast> fluggaeste;
+	
+	//Konstruktor 
+	
+	public Flug(LocalDateTime startzeit, LocalDateTime landezeit, String startFlughafen, String zielFlughafen) {
+		super();
+		this.startzeit = startzeit;
+		this.landezeit = landezeit;
+		this.startFlughafen = startFlughafen;
+		this.zielFlughafen = zielFlughafen;
+	}
+	//Setter und Getter
+	public LocalDateTime getStartzeit() {
+		return startzeit;
+	}
+	public void setStartzeit(LocalDateTime startzeit) {
+		this.startzeit = startzeit;
+	}
+	public LocalDateTime getLandezeit() {
+		return landezeit;
+	}
+	public void setLandezeit(LocalDateTime landezeit) {
+		this.landezeit = landezeit;
+	}
+	public String getStartFlughafen() {
+		return startFlughafen;
+	}
+	public void setStartFlughafen(String startFlughafen) {
+		this.startFlughafen = startFlughafen;
+	}
+	public String getZielFlughafen() {
+		return zielFlughafen;
+	}
+	public void setZielFlughafen(String zielFlughafen) {
+		this.zielFlughafen = zielFlughafen;
+	}
+	public Flugzeug getFlugzeug() {
+		return flugzeug;
+	}
+	public void setFlugzeug(Flugzeug flugzeug) {
+		this.flugzeug = flugzeug;
+	}
+	public ArrayList<Pilot> getPiloten() {
+		return piloten;
+	}
+	public void setPiloten(ArrayList<Pilot> piloten) {
+		this.piloten = piloten;
+	}
+	public ArrayList<FlugBegleiter> getFlugBegleiter() {
+		return flugBegleiter;
+	}
+	public void setFlugBegleiter(ArrayList<FlugBegleiter> flugBegleiter) {
+		this.flugBegleiter = flugBegleiter;
+	}
+	public ArrayList<FlugGast> getFluggaeste() {
+		return fluggaeste;
+	}
+	public void setFluggaeste(ArrayList<FlugGast> fluggaeste) {
+		this.fluggaeste = fluggaeste;
+	}
+	
+	//Methoden 
+	@Override
+	public String toString() {
+		return "Flug [startzeit=" + startzeit + ", landezeit=" + landezeit + ", startFlughafen=" + startFlughafen
+				+ ", zielFlughafen=" + zielFlughafen + "]";
+	}
+
+    public static int anzahlGaeste(){
+    return ArrayList<FlugGast>().size ;
+    }
+    public static int anzahlFreiePlaetze(){
+        return anzahlPlaetze()- anzahlGaeste();
+    }
+    private boolean checkFlug(){
+
+    }
+    public boolean starten(){
+        if(checkFlug()){
+            System.out.println("Flugzeug kann startet!");
+        }else{
+            System.out.println("Flugzeug kann nicht starten!")
+        }
+    }
+
+}
